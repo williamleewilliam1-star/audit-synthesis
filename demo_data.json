@@ -1,6 +1,6 @@
 {
-  "schema": "researchproof.audit.v1",
-  "generated_at": "2026-10-03T05:52:17+00:00",
+  "schema": "auditsynthesis.audit.v1",
+  "generated_at": "2026-10-03T05:56:21+00:00",
   "question": "agentic research workflows provenance audit trail",
   "plan": {
     "question": "agentic research workflows provenance audit trail",
@@ -157,7 +157,7 @@
   "summary": {
     "retrieval_statement": "Retrieved 8 non-retracted works spanning 2004-2022; 8 are marked open access.",
     "scientific_conclusion": "WITHHELD",
-    "reason": "ResearchProof v0.1 does not infer a scientific conclusion from metadata alone.",
+    "reason": "AuditSynthesis v0.1 does not infer a scientific conclusion from metadata alone.",
     "human_approval_required": true
   },
   "decision": {
@@ -167,44 +167,44 @@
   },
   "audit": [
     {
-      "at": "2026-10-03T05:52:17+00:00",
+      "at": "2026-10-03T05:56:21+00:00",
       "step": "PLAN",
       "input_sha256": "9130bd5e3497a97ce48dbc6524d93311ecc4bcf8e65e9ca4a76d265153f132a4",
       "output_sha256": "71a4dc749e60c9bb48abd3a4bed334c995ff1b9c729e2b65b9226cc715bc7e4a",
       "note": "Bound the question and trust policy before retrieval."
     },
     {
-      "at": "2026-10-03T05:52:17+00:00",
+      "at": "2026-10-03T05:56:21+00:00",
       "step": "DISCOVER",
       "input_sha256": "9130bd5e3497a97ce48dbc6524d93311ecc4bcf8e65e9ca4a76d265153f132a4",
       "output_sha256": "596f7ed8424ace803a205e2d2dbaa268e945da313308b3b1bca9199843833dbb",
       "note": "Retrieve candidate works from OpenAlex."
     },
     {
-      "at": "2026-10-03T05:52:17+00:00",
+      "at": "2026-10-03T05:56:21+00:00",
       "step": "NORMALIZE",
       "input_sha256": "a295734595e0a5d33581621a0d97a163ad46669bd947c81a39919f3fa26f4407",
       "output_sha256": "1577917d3cf04694768158819fe1e6b21be51334e2f24a771fddea108744de21",
       "note": "Normalize metadata into an auditable evidence schema."
     },
     {
-      "at": "2026-10-03T05:52:17+00:00",
+      "at": "2026-10-03T05:56:21+00:00",
       "step": "VALIDATE",
       "input_sha256": "1577917d3cf04694768158819fe1e6b21be51334e2f24a771fddea108744de21",
       "output_sha256": "a3f5e89e674e7c494fc7f42b057d0783a4bdc7257456096f7ee77f378fa5f195",
       "note": "Retracted works are excluded; metadata gaps remain visible."
     },
     {
-      "at": "2026-10-03T05:52:17+00:00",
+      "at": "2026-10-03T05:56:21+00:00",
       "step": "SYNTHESIZE",
       "input_sha256": "a3f5e89e674e7c494fc7f42b057d0783a4bdc7257456096f7ee77f378fa5f195",
-      "output_sha256": "f717d08bc5a23a4f1ab1f14348677788ceabc8f0b73afe1d64272e04c9e7ff03",
+      "output_sha256": "122bc554b5065693c9d0ea1a87dff13b8927ecaa6a002cd59374a49f5228b4f7",
       "note": "Generate only claims supported by retrieved metadata; withhold scientific inference."
     },
     {
-      "at": "2026-10-03T05:52:17+00:00",
+      "at": "2026-10-03T05:56:21+00:00",
       "step": "REVIEW_GATE",
-      "input_sha256": "f717d08bc5a23a4f1ab1f14348677788ceabc8f0b73afe1d64272e04c9e7ff03",
+      "input_sha256": "122bc554b5065693c9d0ea1a87dff13b8927ecaa6a002cd59374a49f5228b4f7",
       "output_sha256": "4c4b4207d8611385859e4579affd4a8b9aee4a45ba0205327226efbd6412012c",
       "note": "A person must review sources and explicitly approve downstream use."
     }

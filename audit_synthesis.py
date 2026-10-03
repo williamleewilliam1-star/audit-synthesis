@@ -2,7 +2,7 @@
 import argparse, datetime as dt, hashlib, html, json, pathlib, urllib.parse, urllib.request
 
 OPENALEX = 'https://api.openalex.org/works'
-USER_AGENT = 'ResearchProof/0.1 (+https://github.com/williamleewilliam1-star/researchproof)'
+USER_AGENT = 'AuditSynthesis/0.1 (+https://github.com/williamleewilliam1-star/audit-synthesis)'
 
 def canon(obj):
     return json.dumps(obj, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()
@@ -72,7 +72,7 @@ def run_workflow(query, raw_payload):
         if accepted else 'No non-retracted works were accepted.'
       ),
       'scientific_conclusion':'WITHHELD',
-      'reason':'ResearchProof v0.1 does not infer a scientific conclusion from metadata alone.',
+      'reason':'AuditSynthesis v0.1 does not infer a scientific conclusion from metadata alone.',
       'human_approval_required':True
     }
     event('SYNTHESIZE', validation, summary, 'Generate only claims supported by retrieved metadata; withhold scientific inference.')
@@ -80,7 +80,7 @@ def run_workflow(query, raw_payload):
     decision={'status':'READY_FOR_HUMAN_REVIEW' if accepted else 'ESCALATE_NO_EVIDENCE','approved':False,'reviewer':None}
     event('REVIEW_GATE', summary, decision, 'A person must review sources and explicitly approve downstream use.')
 
-    return {'schema':'researchproof.audit.v1','generated_at':now(),'question':query,'plan':plan,'evidence':accepted,'excluded':excluded,'validation':validation,'summary':summary,'decision':decision,'audit':audit}
+    return {'schema':'auditsynthesis.audit.v1','generated_at':now(),'question':query,'plan':plan,'evidence':accepted,'excluded':excluded,'validation':validation,'summary':summary,'decision':decision,'audit':audit}
 
 def render_html(report):
     rows=''.join('<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
@@ -90,7 +90,7 @@ def render_html(report):
     events=''.join('<li><strong>%s</strong> — %s<br><code>%s → %s</code></li>' % (
       html.escape(a['step']), html.escape(a['note']), a['input_sha256'][:12], a['output_sha256'][:12]) for a in report['audit'])
     data=html.escape(json.dumps(report,ensure_ascii=False,indent=2))
-    return '''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ResearchProof audit demo</title><link rel="stylesheet" href="styles.css"></head><body><main><p class="eyebrow">AUDITABLE RESEARCH AGENT · V0.1</p><h1>ResearchProof</h1><p class="lede">Evidence synthesis that shows its work and stops before unsupported scientific conclusions.</p><section><h2>Question</h2><p>%s</p><p class="statement">%s</p><p><strong>Scientific conclusion:</strong> %s — %s</p></section><section><h2>Evidence matrix</h2><div class="scroll"><table><thead><tr><th>Year</th><th>Title</th><th>Source</th><th>DOI</th><th>Flags</th></tr></thead><tbody>%s</tbody></table></div></section><section><h2>Agent audit trail</h2><ol>%s</ol><p class="gate">Human gate: %s · approved=false</p></section><details><summary>Machine-readable report</summary><pre>%s</pre></details><footer>Prototype for Digital Science Catalyst Grant 2026. Public metadata only. No scientific conclusion is generated without human review.</footer></main></body></html>''' % (html.escape(report['question']),html.escape(report['summary']['retrieval_statement']),html.escape(report['summary']['scientific_conclusion']),html.escape(report['summary']['reason']),rows,events,html.escape(report['decision']['status']),data)
+    return '''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AuditSynthesis audit demo</title><link rel="stylesheet" href="styles.css"></head><body><main><p class="eyebrow">AUDITABLE RESEARCH AGENT · V0.1</p><h1>AuditSynthesis</h1><p class="lede">Evidence synthesis that shows its work and stops before unsupported scientific conclusions.</p><section><h2>Question</h2><p>%s</p><p class="statement">%s</p><p><strong>Scientific conclusion:</strong> %s — %s</p></section><section><h2>Evidence matrix</h2><div class="scroll"><table><thead><tr><th>Year</th><th>Title</th><th>Source</th><th>DOI</th><th>Flags</th></tr></thead><tbody>%s</tbody></table></div></section><section><h2>Agent audit trail</h2><ol>%s</ol><p class="gate">Human gate: %s · approved=false</p></section><details><summary>Machine-readable report</summary><pre>%s</pre></details><footer>Prototype for Digital Science Catalyst Grant 2026. Public metadata only. No scientific conclusion is generated without human review.</footer></main></body></html>''' % (html.escape(report['question']),html.escape(report['summary']['retrieval_statement']),html.escape(report['summary']['scientific_conclusion']),html.escape(report['summary']['reason']),rows,events,html.escape(report['decision']['status']),data)
 
 def main():
     ap=argparse.ArgumentParser()

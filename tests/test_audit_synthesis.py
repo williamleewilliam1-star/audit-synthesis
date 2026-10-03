@@ -1,6 +1,6 @@
 import json, pathlib, sys, unittest
 sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]))
-from researchproof import run_workflow, sha, normalize_work
+from audit_synthesis import run_workflow, sha, normalize_work
 
 class Tests(unittest.TestCase):
     @classmethod
