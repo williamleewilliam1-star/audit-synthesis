@@ -75,13 +75,4 @@ Digital Science is particularly relevant because its ecosystem spans research di
 
 ## 9. BUDGET
 
-I would use up to £25,000 over a focused prototype-to-pilot phase:
-
-- £8,000 — engineering the provenance/replay engine, policy versioning and connector architecture;
-- £5,000 — source-passage grounding, multi-source retrieval and a reproducible evaluation harness;
-- £4,000 — researcher/research-manager interviews, compensated usability studies and pilot design;
-- £3,000 — independent security, privacy and governance review;
-- £3,000 — hosted pilot infrastructure and integration work;
-- £2,000 — documentation, accessibility, onboarding and contingency.
-
-The grant would turn a working trust-mechanism prototype into something tested with the people who actually make research decisions, with measurable review outcomes and a clear institutional integration path.
+I would use up to £25,000: £8,000 for provenance/replay, policy versioning and connectors; £5,000 for source-passage grounding, multi-source retrieval and evaluation; £4,000 for compensated researcher and research-manager studies; £3,000 for independent security, privacy and governance review; £3,000 for pilot infrastructure and integrations; and £2,000 for documentation, accessibility and contingency. This would move the working prototype into measurable institutional pilots.
