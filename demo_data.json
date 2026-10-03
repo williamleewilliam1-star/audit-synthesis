@@ -1,0 +1,213 @@
+{
+  "schema": "researchproof.audit.v1",
+  "generated_at": "2026-10-03T05:52:17+00:00",
+  "question": "agentic research workflows provenance audit trail",
+  "plan": {
+    "question": "agentic research workflows provenance audit trail",
+    "policy": {
+      "exclude_retracted": true,
+      "human_approval_required": true,
+      "scientific_claims_without_source_support": "forbidden"
+    }
+  },
+  "evidence": [
+    {
+      "openalex_id": "https://openalex.org/W2168103533",
+      "title": "Taverna: a tool for the composition and enactment of bioinformatics workflows",
+      "year": 2004,
+      "doi": "https://doi.org/10.1093/bioinformatics/bth361",
+      "cited_by_count": 1618,
+      "is_retracted": false,
+      "is_open_access": true,
+      "source": "Bioinformatics",
+      "authors": [
+        "Tom Oinn",
+        "Matthew Addis",
+        "Justin Ferris",
+        "Darren Marvin"
+      ],
+      "flags": []
+    },
+    {
+      "openalex_id": "https://openalex.org/W4310021468",
+      "title": "Accounting and auditing with blockchain technology and artificial Intelligence: A literature review",
+      "year": 2022,
+      "doi": "https://doi.org/10.1016/j.accinf.2022.100598",
+      "cited_by_count": 572,
+      "is_retracted": false,
+      "is_open_access": true,
+      "source": "International Journal of Accounting Information Systems",
+      "authors": [
+        "Hongdan Han",
+        "Radha K. Shiwakoti",
+        "Robin Jarvis",
+        "Chima Mordi"
+      ],
+      "flags": []
+    },
+    {
+      "openalex_id": "https://openalex.org/W2747394252",
+      "title": "Data provenance to audit compliance with privacy policy in the Internet of Things",
+      "year": 2017,
+      "doi": "https://doi.org/10.1007/s00779-017-1067-4",
+      "cited_by_count": 76,
+      "is_retracted": false,
+      "is_open_access": true,
+      "source": "Personal and Ubiquitous Computing",
+      "authors": [
+        "Thomas Pasquier",
+        "Jatinder Singh",
+        "Julia Powles",
+        "David M. Eyers"
+      ],
+      "flags": []
+    },
+    {
+      "openalex_id": "https://openalex.org/W2093427535",
+      "title": "The Requirements of Using Provenance in e-Science Experiments",
+      "year": 2006,
+      "doi": "https://doi.org/10.1007/s10723-006-9055-3",
+      "cited_by_count": 126,
+      "is_retracted": false,
+      "is_open_access": true,
+      "source": "Journal of Grid Computing",
+      "authors": [
+        "Simon Miles",
+        "Paul Thomas Groth",
+        "Miguel Castelo‐Branco",
+        "Luc Moreau"
+      ],
+      "flags": []
+    },
+    {
+      "openalex_id": "https://openalex.org/W173339872",
+      "title": "Human-agent collectives",
+      "year": 2014,
+      "doi": "https://doi.org/10.1145/2629559",
+      "cited_by_count": 170,
+      "is_retracted": false,
+      "is_open_access": true,
+      "source": "Communications of the ACM",
+      "authors": [
+        "Nicholas R. Jennings",
+        "Luc Moreau",
+        "D. Nicholson",
+        "Sarvapali D. Ramchurn"
+      ],
+      "flags": []
+    },
+    {
+      "openalex_id": "https://openalex.org/W2931810449",
+      "title": "Blockchain technology in agri-food value chain management: A synthesis of applications, challenges and future research directions",
+      "year": 2019,
+      "doi": "https://doi.org/10.1016/j.compind.2019.04.002",
+      "cited_by_count": 736,
+      "is_retracted": false,
+      "is_open_access": true,
+      "source": "Computers in Industry",
+      "authors": [
+        "Guoqing Zhao",
+        "Shaofeng Liu",
+        "Carmen López",
+        "Haiyan Lu"
+      ],
+      "flags": []
+    },
+    {
+      "openalex_id": "https://openalex.org/W3001807593",
+      "title": "Closing the AI accountability gap",
+      "year": 2020,
+      "doi": "https://doi.org/10.1145/3351095.3372873",
+      "cited_by_count": 1368,
+      "is_retracted": false,
+      "is_open_access": true,
+      "source": null,
+      "authors": [
+        "Inioluwa Deborah Raji",
+        "Andrew Smart",
+        "Rebecca N. White",
+        "Margaret Mitchell"
+      ],
+      "flags": []
+    },
+    {
+      "openalex_id": "https://openalex.org/W2038615878",
+      "title": "Implementing interoperable provenance in biomedical research",
+      "year": 2013,
+      "doi": "https://doi.org/10.1016/j.future.2013.12.001",
+      "cited_by_count": 36,
+      "is_retracted": false,
+      "is_open_access": true,
+      "source": "Future Generation Computer Systems",
+      "authors": [
+        "Vasa Ćurčin",
+        "Simon Miles",
+        "Roxana Dánger",
+        "Y. Chen"
+      ],
+      "flags": []
+    }
+  ],
+  "excluded": [],
+  "validation": {
+    "accepted_count": 8,
+    "excluded_count": 0,
+    "flags": []
+  },
+  "summary": {
+    "retrieval_statement": "Retrieved 8 non-retracted works spanning 2004-2022; 8 are marked open access.",
+    "scientific_conclusion": "WITHHELD",
+    "reason": "ResearchProof v0.1 does not infer a scientific conclusion from metadata alone.",
+    "human_approval_required": true
+  },
+  "decision": {
+    "status": "READY_FOR_HUMAN_REVIEW",
+    "approved": false,
+    "reviewer": null
+  },
+  "audit": [
+    {
+      "at": "2026-10-03T05:52:17+00:00",
+      "step": "PLAN",
+      "input_sha256": "9130bd5e3497a97ce48dbc6524d93311ecc4bcf8e65e9ca4a76d265153f132a4",
+      "output_sha256": "71a4dc749e60c9bb48abd3a4bed334c995ff1b9c729e2b65b9226cc715bc7e4a",
+      "note": "Bound the question and trust policy before retrieval."
+    },
+    {
+      "at": "2026-10-03T05:52:17+00:00",
+      "step": "DISCOVER",
+      "input_sha256": "9130bd5e3497a97ce48dbc6524d93311ecc4bcf8e65e9ca4a76d265153f132a4",
+      "output_sha256": "596f7ed8424ace803a205e2d2dbaa268e945da313308b3b1bca9199843833dbb",
+      "note": "Retrieve candidate works from OpenAlex."
+    },
+    {
+      "at": "2026-10-03T05:52:17+00:00",
+      "step": "NORMALIZE",
+      "input_sha256": "a295734595e0a5d33581621a0d97a163ad46669bd947c81a39919f3fa26f4407",
+      "output_sha256": "1577917d3cf04694768158819fe1e6b21be51334e2f24a771fddea108744de21",
+      "note": "Normalize metadata into an auditable evidence schema."
+    },
+    {
+      "at": "2026-10-03T05:52:17+00:00",
+      "step": "VALIDATE",
+      "input_sha256": "1577917d3cf04694768158819fe1e6b21be51334e2f24a771fddea108744de21",
+      "output_sha256": "a3f5e89e674e7c494fc7f42b057d0783a4bdc7257456096f7ee77f378fa5f195",
+      "note": "Retracted works are excluded; metadata gaps remain visible."
+    },
+    {
+      "at": "2026-10-03T05:52:17+00:00",
+      "step": "SYNTHESIZE",
+      "input_sha256": "a3f5e89e674e7c494fc7f42b057d0783a4bdc7257456096f7ee77f378fa5f195",
+      "output_sha256": "f717d08bc5a23a4f1ab1f14348677788ceabc8f0b73afe1d64272e04c9e7ff03",
+      "note": "Generate only claims supported by retrieved metadata; withhold scientific inference."
+    },
+    {
+      "at": "2026-10-03T05:52:17+00:00",
+      "step": "REVIEW_GATE",
+      "input_sha256": "f717d08bc5a23a4f1ab1f14348677788ceabc8f0b73afe1d64272e04c9e7ff03",
+      "output_sha256": "4c4b4207d8611385859e4579affd4a8b9aee4a45ba0205327226efbd6412012c",
+      "note": "A person must review sources and explicitly approve downstream use."
+    }
+  ],
+  "retrieval_source": "https://api.openalex.org/works?search=agentic+research+workflows+provenance+audit+trail&per-page=8"
+}
